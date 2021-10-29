@@ -13,6 +13,7 @@ import Pai from './components/comunicacao/direta/Pai';
 import Super from './components/comunicacao/indireta/Super';
 import Input from './components/forms/Input';
 import Contador from './components/comunicacao/contador/Contador';
+import Megasena from './components/mega-sena/Megasena';
 
 export default props => (
     <div className="App">
@@ -45,14 +46,17 @@ export default props => (
             <Card titulo="07- Comunicação direta" color="#6a6fb0">
                 <Pai sobrenome="Freitas"></Pai>
             </Card>
-            <Card titulo="07- Comunicação direta" color="#6a6fb0">
+            <Card titulo="08- Comunicação Indireta" color="#DBDB70">
                 <Super></Super>
             </Card>
-            <Card titulo="07- Comunicação direta" color="#6a6fb0">
+            <Card titulo="09- Input" color="#8E2323">
                 <Input />
             </Card>
-            <Card titulo="07- Comunicação direta" color="#6a6fb0">
+            <Card titulo="10- State, Button e Classes" color="#871F78">
                 <Contador passo={20} valor={100}/>
+            </Card>
+            <Card titulo="11- Jogo da Mega-sena" color="#2F4F2F">
+                <Megasena qtdNumber={25}/>
             </Card>
         </div>
     </div>
