@@ -9,31 +9,51 @@ import Card from './components/layout/Card';
 import Renderizacao from './components/basicos/Renderizacao';
 import Condicional from './components/basicos/Condicional';
 import CondicionalIf from './components/basicos/CondicionalIf';
+import Pai from './components/comunicacao/direta/Pai';
+import Super from './components/comunicacao/indireta/Super';
+import Input from './components/forms/Input';
+import Contador from './components/comunicacao/contador/Contador';
 
 export default props => (
     <div className="App">
-        <Card titulo="01-Aprendendo a criar um componente">
-            <MyComponent/>
-        </Card>
-        <Card titulo="02 - Componentes com parâmetros">
-            <WithParametro titulo="Este é um titulo" subtitulo="Este é um subtitulo"/>
-        </Card>
-        <Card titulo="03- Componentes com filhos">
-            <WithChildren>
-                <li>Ana</li>
-                <li>Bia</li>
-                <li>Augusto</li>
-                <li>Livia</li>
-            </WithChildren>
-        </Card>
-        <Card titulo="04- Repetição">
-            <Renderizacao/>
-        </Card>
-        <Card titulo="05- Condicional v1">
-            <Condicional numero={15}></Condicional>
-        </Card>
-        <Card titulo="06- Condicional v2">
-            <CondicionalIf numero={15}></CondicionalIf>
-        </Card>
+        <h1>Fundamentos React JS</h1>
+        <div className="cards">
+
+            <Card titulo="01-Aprendendo a criar um componente" color='#FA6900'>
+                <MyComponent />
+            </Card>
+            <Card titulo="02 - Componentes com parâmetros" color="#E94C6F">
+                <WithParametro titulo="Este é um titulo" subtitulo="Este é um subtitulo" />
+            </Card>
+            <Card titulo="03- Componentes com filhos" color="#008BBA">
+                <WithChildren>
+                    <li>Ana</li>
+                    <li>Bia</li>
+                    <li>Augusto</li>
+                    <li>Livia</li>
+                </WithChildren>
+            </Card>
+            <Card titulo="04- Repetição" color="#D96459">
+                <Renderizacao />
+            </Card>
+            <Card titulo="05- Condicional v1" color="#FF856B">
+                <Condicional numero={15}></Condicional>
+            </Card>
+            <Card titulo="06- Condicional v2" color="#92B06A">
+                <CondicionalIf numero={15}></CondicionalIf>
+            </Card>
+            <Card titulo="07- Comunicação direta" color="#6a6fb0">
+                <Pai sobrenome="Freitas"></Pai>
+            </Card>
+            <Card titulo="07- Comunicação direta" color="#6a6fb0">
+                <Super></Super>
+            </Card>
+            <Card titulo="07- Comunicação direta" color="#6a6fb0">
+                <Input />
+            </Card>
+            <Card titulo="07- Comunicação direta" color="#6a6fb0">
+                <Contador passo={20} valor={100}/>
+            </Card>
+        </div>
     </div>
 );
